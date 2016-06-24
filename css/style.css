@@ -505,7 +505,6 @@ header nav .cart span{
     -moz-transition: opacity .3s linear;	
     -o-transition: opacity .3s linear;	
     transition: opacity .3s linear;	
-
 }
 .col-bottom{
 	background: #fff;
@@ -970,6 +969,9 @@ footer{
 	margin: 0;
     height: 30px;
     border-radius: 0;
+    -webkit-transition: background .3s linear;
+    -moz-transition: background .3s linear;
+    -o-transition: background .3s linear;
     transition: background .3s linear;
 }
 .buttons .btn:focus{

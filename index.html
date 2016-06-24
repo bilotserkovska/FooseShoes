@@ -8,12 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 	<!-- begin header -->
 	<header>
 		<div class="head-top">
+			<!-- begin container -->
 			<div class="container">
 				<a class="logo" href="index.html">
 					<img src="images/logo.png" alt="logo">
@@ -29,9 +29,11 @@
 				</form>
 				<div style="clear:both"></div>
 			</div>
-		</div>
-		<!-- begin navbar menu  -->
+			<!-- & container -->
+		</div>		
+		<!-- begin container -->
 		<div class="container">
+			<!-- begin navbar menu  -->
 			<nav class="header-menu">
 				<a href="index.html">home</a>
 				<a href="products.html">products</a>
@@ -43,6 +45,7 @@
 				<a class="right star" href="#"><span>30</span></a>
 				<div style="clear:both"></div>
 			</nav>
+			<!-- & navbar menu -->
 			<!-- begin mobile-menu -->
 			<div class="menu-wrap">
 				<div class="burger-button">
@@ -60,7 +63,7 @@
 			</div>
 			<!-- & mobile-menu -->
 		</div>
-		<!-- & navbar menu -->
+		<!-- & container -->		
 	</header>
 	<!-- & header -->
 
@@ -231,9 +234,11 @@
 
 		<!-- begin products section -->
 		<section class="products">
+			<!-- begin container -->
 			<div class="container">
 				<h2>New arrivals on FooseShoes</h2>
 				<button>show all</button>
+				<!-- begin col-wrapper -->
 				<div class="col-wrapper">
 					<div class="col left-col">
 						<img src="images/image01.jpg" alt="image">
@@ -253,7 +258,6 @@
 						<div class="sticker">on sale!</div>
 						<div class="col-bottom">
 							<div class="price">$145,99</div>
-							<!-- <div class="sticker">on sale!</div> -->
 							<span>Even&amp;Odd</span>
 							<ul class="serv-list">
 								<li><a class="link-watch" href="#"></a></li>
@@ -277,8 +281,10 @@
 						</div>
 					</div>
 				</div>
+				<!-- & col-wrapper -->
 				<h2>Best sellers of the month</h2>
 				<button>show all</button>
+				<!-- begin col-wrapper -->
 				<div class="col-wrapper">
 					<div class="col left-col">
 						<img src="images/image04.jpg" alt="image">
@@ -321,6 +327,9 @@
 						</div>
 					</div>
 				</div>
+				<!-- & col-wrapper -->
+
+				<!-- begin advertising-box -->
 				<div class="advertising-box">
 					<div class="adv-col adv-col-sm">
 						<h3>Free Shipping</h3>
@@ -358,13 +367,16 @@
 						</div>
 					</div>
 				</div>
+				<!-- & advertising-box -->
 				<div style="clear:both"></div>
-			</div>			
+			</div>
+			<!-- & container -->			
 		</section>
 		<!-- & products section -->
 
 		<!-- begin widgets section -->
 		<section class="widgets">
+			<!-- begin container -->
 			<div class="container">
 				<div class="wid-col-wrap">
 					<div class="wid-left-col">
@@ -398,21 +410,24 @@
 					</div>
 				</div>
 			</div>
+			<!-- & container -->
 			<div class="contacts">
+				<!-- begin container -->
 				<div class="container">
 					<form action="#">
 						<input type="text" placeholder="Enter email for newsletter" class="form-control">
 						<input type="submit" value="">
 					</form>
 					<nav class="social">
-						<a class="fb" href="#"></a>
-						<a class="tw" href="#"></a>
-						<a class="google" href="#"></a>
-						<a class="ld" href="#"></a>
-						<a class="fl" href="#"></a>
+						<a class="fb" href="https://www.facebook.com/"></a>
+						<a class="tw" href="https://twitter.com/"></a>
+						<a class="google" href="https://plus.google.com"></a>
+						<a class="ld" href="https://www.linkedin.com/"></a>
+						<a class="fl" href="https://www.flickr.com/"></a>
 					</nav>
 					<div style="clear:both"></div>
 				</div>
+				<!-- & container -->
 			</div>
 		</section>
 		<!-- & widgets section -->
@@ -421,6 +436,7 @@
 
 	<!-- begin footer -->
 	<footer>
+		<!-- begin container -->
 		<div class="container">
 			<div class="copyright">
 				<p>
@@ -431,14 +447,38 @@
 				</p>
 			</div>
 			<nav class="menu">
-				<a href="#">home</a>
+				<a href="index.html">home</a>
 				<a href="#">support</a>
 				<a href="#">terms and conditions</a>
 				<a href="#">faqs</a>
 				<a href="#">contact us</a>
 			</nav>
 		</div>
+		<!-- & container -->
 	</footer>
 	<!-- & footer -->
+
+	<!-- begin JavaScript -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// start js for carousel
+			$('.carousel').carousel()
+				// start js for mobile-menu
+			   	$('.burger-button').click(function(){
+			   		if($(this).hasClass('burger-button')) {
+			   			if($('.menu-button').hasClass('menu-button-active')) {
+				            $('.menu-button').removeClass('menu-button-active');
+				            $('.menu-button').addClass('menu-button-hidden');
+				            $('.menu-button').slideUp();
+				        }else{
+				            $('.menu-button').removeClass('.menu-button-hidden');            
+				            $('.menu-button').addClass('menu-button-active');
+				            $('.menu-button').slideDown();
+				        }
+			   		}
+			    });	
+			});
+	</script>
+	<!-- & JavaScript -->
 </body>
 </html>
