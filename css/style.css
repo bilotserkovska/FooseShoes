@@ -1463,6 +1463,10 @@ footer{
 	.btn-group{
 		margin: auto;
 	}
+	.buttons .dropdown-menu{
+		width: 100%;
+		left: 0;
+	}
 /*<!-- & view-products-page section -->*/
 
 /*______________END PRODUCTS PAGE___________________*/
